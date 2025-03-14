@@ -11,4 +11,19 @@ set shiftwidth=4
 set formatoptions+=croq
 
 " Use the system clipboard (Note: may not work in IntelliJ as clipboard access can be limited)
+" Use system clipboard explicitly for yanking and pasting
 set clipboard=unnamedplus
+
+" Yank to system clipboard
+vnoremap y "+y
+nnoremap Y "+Y
+nnoremap yy "+yy
+
+" Paste from system clipboard
+nnoremap p "+p
+nnoremap P "+P
+
+
+" Make 'd' delete and copy to system clipboard
+nnoremap d "+d
+vnoremap d "+d
